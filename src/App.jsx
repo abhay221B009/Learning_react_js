@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import React from "react";
+import Greet from "./components/Greet";
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer";
+import WelcomeMessage from "./components/WelcomeMessage";
+import Form from "./components/Form";
+import JSXRules from "./components/JSXRules";
+import Expression from "./components/Expression";
+import Greeting2 from "./components/Greeting2";
+import ProductInfo from "./components/ProductInfo";
+import List from "./components/List";
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    <section>
+      Hello,this first greeting is from App.jsx,and second greetings is from
+      greet file.
+      {/* this <Greet/> is a self closing tag , it can also be written as <Greet></Greet> */}
+      */
+      <Greet />
+      <WelcomeMessage />
+      <Greeting2 />
+      <Header />
+      <MainContent />
+      <Form />
+      <ProductInfo />
+      <List />
+      <JSXRules />
+      <Expression />
+      <Footer />
+    </section>
+  );
+};
+export default App;
+//funtion App (){
+// return
+//};
+//export default App
+//this function can also be declared as this function App (), method.
